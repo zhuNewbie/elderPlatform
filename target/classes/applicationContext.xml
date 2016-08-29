@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<bean id="hello" class = "cn.elderPlatform.login.Hello">
+		<property name="s" value="numberty"/>
+	</bean>
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+    	<property name="driverClassName" value="com.mysql.jdbc.Driver" />  
+    	<property name="url" value="jdbc:mysql://192.168.1.155:3306/zm?useUnicode=true&amp;characterEncoding=gb2312&amp;zeroDateTimeBehavior=convertToNull" />  
+    	<property name="username" value="root"/>
+    	<property name="password" value=""/>
+	</bean>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
+    	<property name="configLocation" value="classpath:mybatis-config.xml" />  
+    	<property name="dataSource" ref="dataSource" /> 
+    	 <property name="mapperLocations">
+            <list>
+                <value>classpath:cn/elderPlatform/login/*Mapper.xml</value>
+            </list>
+        </property> 
+	</bean>  
+	
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+  		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+	
+	<bean id="userDao" class="cn.elderPlatform.login.UserImp">
+  		<property name="sqlSession" ref="sqlSession" />
+	</bean> 
+	
+	<!--  <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+  		<property name="basePackage" value="cn.elderPlatform.logindao" />
+	</bean>-->
+	
+
+</beans>
