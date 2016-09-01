@@ -9,8 +9,7 @@
 	<body>
 	
 		<%
-		response.sendRedirect("../login/login.jsp"); 
-		request.getSession().setAttribute("info","请先登陆");
+		request.getRequestDispatcher("../login/login.jsp").forward(request, response);
 		%>
 
 	</body>

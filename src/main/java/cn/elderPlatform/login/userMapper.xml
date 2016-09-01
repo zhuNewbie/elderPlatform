@@ -21,6 +21,6 @@
         select * from user where name=#{name}
     </select>
     <insert id="insertUser" parameterType="cn.elderPlatform.login.User">
-    	insert into user (name) values ( #{name})</insert>
+    	insert into user (name,password) values ( #{name},#{password})</insert>
    
 </mapper>
