@@ -1,10 +1,13 @@
 package cn.elderPlatform.controller;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +22,7 @@ import cn.zylhkj.init.SystemContext;
 @RequestMapping("/user")
 
 public class UserController {
+	 private static final Logger logger = LogManager.getLogger(UserController.class.getName());
 	
 	private UserImp userBiz;
 	
@@ -46,7 +50,7 @@ public class UserController {
 			Model model) throws IOException {
 		// int userId = Integer.parseInt(request.getParameter("id"));
 		// User user = this.userService.getUserById(userId);
-		
+		request.setCharacterEncoding("utf-8");
 		if(userBiz == null){
 			initUserController();
 		}
@@ -67,11 +71,15 @@ public class UserController {
 	}
 
 	@RequestMapping("/login")
-	public String login(HttpServletRequest request, HttpServletResponse response, Model model) {
+	public String login(HttpServletRequest request,
+			HttpServletResponse response, 
+			Model model) throws
+	UnsupportedEncodingException {
 //
 //		ApplicationContext ctx = SystemContext.getApplicationContext();
 //		UserImp userBiz = (UserImp) ctx.getBean("userDao");
-		
+		logger.debug("Hello, World!");
+		request.setCharacterEncoding("utf-8");
 		if(userBiz == null){
 			initUserController();
 		}

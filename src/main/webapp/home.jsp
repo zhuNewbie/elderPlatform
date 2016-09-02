@@ -11,5 +11,14 @@
 你好：
 <c:out value="${userInfo.name }" />
 <a href="./sessionTest.jsp">继续</a>
+
+<!-- test json communiate -->
+
+<form name="f" action="./device/sendBeltMsg.do" method="post">
+  <table>
+  <tr><td>sid:</td><td><input type="text" name="sid"></td></tr>
+  <tr><td>message:</td><td><input type="text" name="message"></td></tr>
+  <tr><td>date:</td><td><input type="datetime" name="createtime"></td></tr>
+  <tr><td colspan=2><input type="submit" value="send"></td></tr></table></form>
 </body>
 </html>

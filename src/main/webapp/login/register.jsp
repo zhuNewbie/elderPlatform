@@ -16,6 +16,7 @@
 
 </script>
 </head>
+
 <body onLoad="init('${sessionScope.err}')">
 
 	<form name="registerForm" action="../user/register.do" method="post">

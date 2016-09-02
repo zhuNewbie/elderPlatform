@@ -31,6 +31,6 @@
 
 	<br/>
 
-<a href="./register.jsp">注册</a>
+<a href="<%=request.getContextPath() %>/login/register.jsp">注册</a>
 </body>
 </html>
