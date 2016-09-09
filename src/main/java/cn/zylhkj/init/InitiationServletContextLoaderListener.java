@@ -10,7 +10,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 
 public class InitiationServletContextLoaderListener implements ServletContextListener {
 
-	private static final Log log = LogFactory.getLog(InitiationServletContextLoaderListener.class);
+	//private static final Log log = LogFactory.getLog(InitiationServletContextLoaderListener.class);
 	  
 	@Override
 	public void contextDestroyed(ServletContextEvent arg0) {
@@ -21,7 +21,7 @@ public class InitiationServletContextLoaderListener implements ServletContextLis
 	@Override
 	public void contextInitialized(ServletContextEvent event) {
 		// TODO Auto-generated method stub
-		log.debug("应用程序初始化 ...");
+		//log.debug("应用程序初始化 ...");
 		System.out.println("应用程序初始化 ...");
 		
 	    ServletContext servletContext = event.getServletContext();
