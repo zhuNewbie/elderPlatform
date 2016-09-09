@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import cn.elderPlatform.login.User;
 import cn.elderPlatform.login.UserImp;
-import cn.elderPlatform.login.dao.UserDao;
+import cn.elderPlatform.login.dao.UserMapper;
 import cn.zylhkj.init.SystemContext;
 
 @Controller
