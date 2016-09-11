@@ -131,7 +131,7 @@ public class DeviceController {
 		String account = request.getParameter("account");
 		String createtime = request.getParameter("createtime");
 		//String basePath = request.getContextPath();
-		log.fatal(sid+":"+message+":"+type+":deviecId#"+deviceId+
+		log.info(sid+":"+message+":"+type+":deviecId#"+deviceId+
 				";time:"+createtime);
 		log.debug("hh");
 		
