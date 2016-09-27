@@ -12,7 +12,8 @@ public class Hello {
 		
 		Hello h = (Hello) ctx.getBean("hl");
 		System.out.println(h);
-
+		ClassPathXmlApplicationContext t = (ClassPathXmlApplicationContext)ctx;
+		t.close();
 	}
 
 }

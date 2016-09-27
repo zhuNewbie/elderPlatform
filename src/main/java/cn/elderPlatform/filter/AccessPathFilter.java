@@ -1,4 +1,4 @@
-package cn.elderPlatform.controller;
+package cn.elderPlatform.filter;
 
 import java.io.IOException;
 import javax.servlet.Filter;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet Filter implementation class AccessPath
  */
 @WebFilter("/AccessPath")
-public class AccessPath implements Filter {
+public class AccessPathFilter implements Filter {
 	
 	public boolean JudgeIsMoblie(HttpServletRequest request) {
 		boolean isMoblie = false;
@@ -58,7 +58,7 @@ public class AccessPath implements Filter {
     /**
      * Default constructor. 
      */
-    public AccessPath() {
+    public AccessPathFilter() {
         // TODO Auto-generated constructor stub
     }
 

@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import cn.elderPlatform.login.User;
 import cn.elderPlatform.login.UserImp;
-import cn.elderPlatform.login.dao.UserMapper;
 import cn.zylhkj.init.SystemContext;
 
 @Controller
@@ -86,7 +85,7 @@ public class UserController {
 		}
 		User user = userBiz.getUserByName(request.getParameter("userName"));
 		System.out.println(user);
-		String basePath = request.getContextPath();
+		//String basePath = request.getContextPath();
 
 		if (user == null) {
 			// response.getWriter().print("<body><p>用户名不存在</p></body></html>");
@@ -119,7 +118,7 @@ public class UserController {
 		}
 		User user = userBiz.getUserById(Integer.parseInt(request.getParameter("id")));
 		System.out.println(user);
-		String basePath = request.getContextPath();
+		//String basePath = request.getContextPath();
 
 		if (user == null) {
 			// response.getWriter().print("<body><p>用户名不存在</p></body></html>");

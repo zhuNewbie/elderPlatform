@@ -61,7 +61,7 @@
   </welcome-file-list>
   <filter>
     <filter-name>PCPhoneFilter</filter-name>
-    <filter-class>cn.elderPlatform.controller.AccessPath</filter-class>
+    <filter-class>cn.elderPlatform.filter.AccessPathFilter</filter-class>
   </filter>
   
   <filter-mapping>

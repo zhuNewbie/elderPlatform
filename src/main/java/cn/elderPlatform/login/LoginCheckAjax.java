@@ -7,10 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.context.ApplicationContext;
-
-import cn.zylhkj.init.SystemContext;
-
+@SuppressWarnings("serial")
 public class LoginCheckAjax  extends HttpServlet {
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
