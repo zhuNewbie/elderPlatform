@@ -51,7 +51,7 @@ public class UserController {
 			Model model) throws IOException {
 		// int userId = Integer.parseInt(request.getParameter("id"));
 		// User user = this.userService.getUserById(userId);
-		request.setCharacterEncoding("utf-8");
+		//request.setCharacterEncoding("utf-8");
 		if(userBiz == null){
 			initUserController();
 		}
@@ -80,7 +80,7 @@ public class UserController {
 //		ApplicationContext ctx = SystemContext.getApplicationContext();
 //		UserImp userBiz = (UserImp) ctx.getBean("userDao");
 		log.debug("Hello, World!");
-		request.setCharacterEncoding("utf-8");
+	    //request.setCharacterEncoding("utf-8");
 		if(userBiz == null){
 			initUserController();
 		}
